@@ -1,5 +1,3 @@
-from collections.abc import dict_values
-
 from constants import PIXEL_PER_BLOCK
 from constants import SCREEN_WIDTH
 from constants import SCREEN_HEIGHT
@@ -14,15 +12,13 @@ def create_matrix():
 
 matrix = create_matrix()
 
-def fill_matrix(matrix1,dict_1):
+def fill_matrix(matrix1):
    for i in range(len(matrix1)):
-        for j in range(10):
-            dic={}
-            dic[(i, j)] = dict_1[i,j]
-            matrix[i].append(dic)
-   return matrix1
+       for j in range(10):
+            matrix1[i].append((i,j))
+   return print(matrix1)
 
-
+matrix = fill_matrix(matrix)
 
 from constants import MAT_ROW
 from constants import MAT_COL
@@ -41,13 +37,10 @@ def matrix_to_screen(matrix1):
 
 
     return dict_values
-
-
 from constants import PLACE_BUTTON2
 from constants import SIZE_SCREEN
 from constants import PLACE_BUTTON1
 loc_dict = matrix_to_screen(matrix)
-matrix = fill_matrix(matrix, loc_dict)
 from constants import BUTTON_LOG
 from constants import BUTTON_SIGN
 def buttons(mouse_loc):
@@ -73,8 +66,8 @@ def buttons_in_screen(X,dict1):
     else:
        return None
 
-# import pygame_gui
-# MANAGER = pygame_gui
+import pygame_gui
+MANAGER = pygame_gui
 
 
 
