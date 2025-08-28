@@ -22,8 +22,11 @@ def matrix_to_screen(matrix1,screen):
                     x += 1
             dict_values[(i//10,j//10)] = list1
 
-    return dict_values
+    return print(dict_values)
 
+from constants import SIZE_SCREEN
+
+loc_dict = matrix_to_screen(matrix,SIZE_SCREEN)
 
 
 
