@@ -35,9 +35,9 @@ kosher=True
 consept="diary"
 link="uuuuu"
 user_list=["הזהבית",True,"diary"]
-# filtered_dict=create_server_dict(address,name,kosher,consept,link)
-# filtered_dict=filtering_kosher(server_dict, user_list)
-# filtered_dict=filtering_consept(server_dict, user_list,filtered_dict)
+filtered_dict=create_server_dict(address,name,kosher,consept,link)
+filtered_dict=filtering_kosher(server_dict, user_list)
+filtered_dict=filtering_consept(server_dict, user_list,filtered_dict)
 # print(filtered_dict)
 
 maps.create_map(user_list[0],filtered_dict)
