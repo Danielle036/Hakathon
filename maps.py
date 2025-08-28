@@ -19,7 +19,7 @@ def add_markers(m, restaurants):
 
 
 def create_map(location, restaurants):
-    m = folium.Map(location, zoom_start=18)
+    m = folium.Map(get_geolocation(location), zoom_start=18)
     add_markers(m, restaurants)
     m.save('map.html')
     new = 2
