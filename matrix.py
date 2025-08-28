@@ -7,8 +7,7 @@ def create_matrix():
     matrix = []
     for i in range(10):
         list1 = []
-        for j in range(10):
-            matrix.append(list1)
+        matrix.append(list1)
     return matrix
 
 matrix = create_matrix()
@@ -28,12 +27,12 @@ def matrix_to_screen(matrix1):
     for i in range(SCREEN_HEIGHT):
         for j in range(SCREEN_WIDTH):
             list1 = []
-            y = i*10
+            y = i*100
             x = j
             for v in range(PIXEL_PER_BLOCK):
                     list1.append((x,y))
                     x += 1
-                    if i in range(10) and j in range(10):
+                    if i <=10 and j <=10:
                      dict_values[(i,j)] = list1
 
 
