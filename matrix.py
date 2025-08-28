@@ -28,7 +28,7 @@ def matrix_to_screen(matrix1):
     for i in range(SCREEN_HEIGHT):
         for j in range(SCREEN_WIDTH):
             list1 = []
-            y = i
+            y = i*10
             x = j
             for v in range(PIXEL_PER_BLOCK):
                     list1.append((x,y))
