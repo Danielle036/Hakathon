@@ -7,29 +7,40 @@ def create_matrix():
     matrix = []
     for i in range(10):
         list1 = []
-        for j in range(10):
-            matrix.append(list1)
+        matrix.append(list1)
     return matrix
 
 matrix = create_matrix()
-def matrix_to_screen(matrix1,screen):
+
+def fill_matrix(matrix1):
+   for i in range(len(matrix1)):
+        for j in range(len(matrix1[i])):
+          matrix1[i][j] = (i,j)
+   return matrix1
+
+matrix = fill_matrix(matrix)
+
+from constants import MAT_ROW
+from constants import MAT_COL
+def matrix_to_screen(matrix1):
     dict_values = {}
     for i in range(SCREEN_HEIGHT):
         for j in range(SCREEN_WIDTH):
             list1 = []
-            y = i
+            y = i*100
             x = j
             for v in range(PIXEL_PER_BLOCK):
                     list1.append((x,y))
                     x += 1
-                    if i in range(10) and j in range(10):
-                        dict_values[(i,j)] = list1
+                    if i <=10 and j <=10:
+                     dict_values[(i,j)] = list1
 
-    return print(dict_values)
+
+    return dict_values
 from constants import PLACE_BUTTON2
 from constants import SIZE_SCREEN
 from constants import PLACE_BUTTON1
-loc_dict = matrix_to_screen(matrix,SIZE_SCREEN)
+loc_dict = matrix_to_screen(matrix)
 from constants import BUTTON_LOG
 from constants import BUTTON_SIGN
 def buttons(mouse_loc):
@@ -58,11 +69,5 @@ def buttons_in_screen(X,dict1):
 import pygame_gui
 MANAGER = pygame_gui
 
-def fill_matrix(matrix1):
-   for i in range(10):
-        for j in range(10):
-          matrix1[i][j] = (i,j)
-   return matrix1
 
-matrix = fill_matrix(matrix)
 
