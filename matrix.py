@@ -1,6 +1,8 @@
 from constants import PIXEL_PER_BLOCK
 from constants import SCREEN_WIDTH
 from constants import SCREEN_HEIGHT
+import pygame
+
 def create_matrix():
     matrix = []
     for i in range(SCREEN_HEIGHT//PIXEL_PER_BLOCK):
@@ -26,7 +28,8 @@ def matrix_to_screen(matrix1,screen):
 
 from constants import SIZE_SCREEN
 
-loc_dict = matrix_to_screen(matrix,SIZE_SCREEN)
-
-
-
+loc_dict = matrix_to_screen(matrix,SIZE_SCREEN
+from constants import BUTTON_LOG
+from constants import BUTTON_SIGN
+def buttons(dict1,mouse_loc):
+  if mouse_loc ==
