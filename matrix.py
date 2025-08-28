@@ -20,10 +20,13 @@ def matrix_to_screen(matrix1,screen):
             for v in range(PIXEL_PER_BLOCK):
                     list1.append((x,y))
                     x += 1
-            dict_values[(i//10,j//10)] = list1
+            dict_values[(i//36,j//36)] = list1
 
-    return dict_values
+    return print(dict_values)
 
+from constants import SIZE_SCREEN
+
+loc_dict = matrix_to_screen(matrix,SIZE_SCREEN)
 
 
 
