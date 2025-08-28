@@ -19,10 +19,11 @@ def matrix_to_screen(matrix1,screen):
             list1 = []
             y = i
             x = j
-            for v in range(PIXEL_PER_BLOCK):
+            if x in range(10) and y in range(10):
+                for v in range(PIXEL_PER_BLOCK):
                     list1.append((x,y))
                     x += 1
-            dict_values[(i//10,j//10)] = list1
+                    dict_values[(i//10,j//10)] = list1
 
     return dict_values
 from constants import PLACE_BUTTON2
@@ -55,7 +56,7 @@ def buttons_in_screen(X,dict1):
        return None
 
 import pygame_gui
-MANAGER = pygame
+MANAGER = pygame_gui
 
 def fill_matrix(matrix1):
    for i in range(10):
