@@ -24,18 +24,33 @@ def matrix_to_screen(matrix1,screen):
                     x += 1
             dict_values[(i//10,j//10)] = list1
 
-    return print(dict_values)
+    return dict_values
 from constants import PLACE_BUTTON2
 from constants import SIZE_SCREEN
 from constants import PLACE_BUTTON1
 loc_dict = matrix_to_screen(matrix,SIZE_SCREEN)
 from constants import BUTTON_LOG
 from constants import BUTTON_SIGN
-def buttons(dict1,mouse_loc):
+def buttons(mouse_loc):
      if mouse_loc == PLACE_BUTTON1 or PLACE_BUTTON2:
-         pass
-     if mouse_loc == BUTTON_SIGN:
-         pass
-     if mouse_loc == BUTTON_LOG:
-        pass
+         x=PLACE_BUTTON1
+         return x
+     elif mouse_loc == BUTTON_LOG:
+         x = BUTTON_LOG
+         return x
+     elif mouse_loc == BUTTON_SIGN:
+         x = BUTTON_SIGN
+         return x
+     else:
+         return False
+
+def buttons_in_screen(X,dict1):
+    if not X==False:
+            for i in dict1.keys:
+                if not i == X:
+                   continue
+                else:
+                   return dict1[i]
+    else:
+       return None
 
