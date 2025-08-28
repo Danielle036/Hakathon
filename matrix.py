@@ -19,13 +19,13 @@ def matrix_to_screen(matrix1,screen):
             list1 = []
             y = i
             x = j
-            if x in range(10) and y in range(10):
-                for v in range(PIXEL_PER_BLOCK):
+            for v in range(PIXEL_PER_BLOCK):
                     list1.append((x,y))
                     x += 1
-                    dict_values[(i//10,j//10)] = list1
+                    if i in range(10) and j in range(10):
+                        dict_values[(i,j)] = list1
 
-    return dict_values
+    return print(dict_values)
 from constants import PLACE_BUTTON2
 from constants import SIZE_SCREEN
 from constants import PLACE_BUTTON1
