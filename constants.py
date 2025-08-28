@@ -16,3 +16,5 @@ BUTTON_HEIGHT = 100
 BUTTON_WIDTH1 = 200
 BUTTON_HEIGHT1 = 100
 TITLE_COLOR = (233,67,67)
+address="התאנה 7,פתח תקווה"
+DICT_RES = {address:["name",True,"diary",True]}
