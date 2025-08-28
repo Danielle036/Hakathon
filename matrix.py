@@ -16,7 +16,7 @@ def fill_matrix(matrix1):
    for i in range(len(matrix1)):
        for j in range(10):
             matrix1[i].append((i,j))
-   return print(matrix1)
+   return matrix1
 
 matrix = fill_matrix(matrix)
 
