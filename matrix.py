@@ -37,7 +37,7 @@ def matrix_to_screen(matrix1):
                      dict_values[(i,j)] = list1
 
 
-    return print(dict_values)
+    return dict_values
 from constants import PLACE_BUTTON2
 from constants import SIZE_SCREEN
 from constants import PLACE_BUTTON1
