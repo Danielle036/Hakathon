@@ -5,9 +5,9 @@ import pygame
 
 def create_matrix():
     matrix = []
-    for i in range(SCREEN_HEIGHT//PIXEL_PER_BLOCK):
+    for i in range(10):
         list1 = []
-        for j in range(SCREEN_WIDTH//PIXEL_PER_BLOCK):
+        for j in range(10):
             matrix.append(list1)
     return matrix
 
@@ -53,4 +53,15 @@ def buttons_in_screen(X,dict1):
                    return dict1[i]
     else:
        return None
+
+import pygame_gui
+MANAGER = pygame
+
+def fill_matrix(matrix1):
+   for i in range(10):
+        for j in range(10):
+          matrix1[i][j] = (i,j)
+   return matrix1
+
+matrix = fill_matrix(matrix)
 
